@@ -5,21 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Fabian Reina</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <header>
-        <h1>Fabian Andres Reina Guatame </h1>
-        <img src="images/Ninja.jpg" alt="">
+        <h1 class="titulo">Fabian Andres Reina Guatame </h1>
     </header>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre mi</a>
-        <a href="#">Clientes</a>
-        <a href="#">Contacto</a>
-    </nav>
-   
+    <div class="background-navegacion ">
+        <nav class="contenedor navegacion-principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mi</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+
+    <img class="img-ninja" src="images/Ninja.jpg" alt="">
+
     <section>
         <h2>Desarrollo de Software</h2>
         <p>Bogota, Colombia </p>
@@ -52,60 +63,37 @@
     </main>
 
     <section>
-        <h2>Contacto</h2> 
+        <h2>Contacto</h2>
         <form>
             <fieldset>
                 <legend>Contactanos llenando el formulario </legend>
 
                 <div>
                     <label for="nombre">Nombre</label>
-                    <input 
-                    type="text" 
-                    id="nombre" 
-                    name="nombre" 
-                    placeholder="Tu nombre"
-                    required
-                    >
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                 </div>
-                
+
                 <div>
 
                     <label for="Telefono">Telefono</label>
-                    <input 
-                    type="tel"
-                    id="Telefono"
-                    name="Telefono"
-                    placeholder="Tu Telefono"
-                    required
-                    >
+                    <input type="tel" id="Telefono" name="Telefono" placeholder="Tu Telefono" required>
                 </div>
 
                 <div>
                     <label for="email">Email</label>
-                    <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Tu email"
-                    required
-                    >
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
                 </div>
-                
+
                 <div>
                     <label for="mensaje">Mensaje</label>
-                    <textarea 
-                    id="mensaje"
-                    name="mensaje"
-                    placeholder="Escribe tu mensaje aqui"
-                    required
-                    ></textarea>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aqui" required></textarea>
                 </div>
-                  
-                <div>                   
+
+                <div>
                     <input type="submit" value="Enviar">
                 </div>
 
-                
+
             </fieldset>
         </form>
     </section>
