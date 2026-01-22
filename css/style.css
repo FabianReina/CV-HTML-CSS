@@ -6,27 +6,16 @@
     --azul-oscuro: #152324;
     --blanco: #ffffff;
 }
-
+ /* Globales */
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+    font-family: "roboto condensed", sans-serif;
+
 }
 body{
     font-size: 16px;
-}
-
-.img-ninja {
-    width: 15%;
-    height: auto;
-    display: block;
-    margin: 2rem auto;
-}   
-
-.titulo{
-    text-align: center;
-    font-size: 3.8rem;
-    font-family: "roboto condensed", sans-serif;
-    font-weight: 700;
+    background-image: linear-gradient(to bottom, var(--beige) 50%, var(--blanco)); 
 }
 
 .contenedor{
@@ -34,25 +23,122 @@ body{
     margin: 0 auto;
 }
 
+.sombra {
+    box-shadow: 8px 11px 0px 0px rgba(0,0,0,0.78);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Tipografía */
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 2.2rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+/*Hero*/
+
+.img-ninja {
+    width: 15%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border: 2px solid var(--cafe);
+    border-radius: 5%;
+}
+  
+
+.hero-contenido{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.hero-texto p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+
+
+/*Titulos */
+
+.titulo{
+    font-weight: 700;
+}
+
+.titulo span{
+    font-size: 5rem;
+}
+
+
+/*Navegacion*/
+
 .navegacion-principal{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .background-navegacion {
     background-color: var(--verde);
 }
 
-.navegacion-principal a{
+.navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
+    text-align: center;
     padding: 1rem;
     font-size: 2rem;
     font-weight: 600;
 }
 
+
+
 .navegacion-principal a:hover{
     background-color: var(--gris);
-    color: var(--azul-oscuro);
+    color: var(--azul-oscuro);S
 }
 
+/*Servicios*/
+
+@media (min-width: 480px) {
+   .servicios{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+
+.servicio {
+    padding: 1rem;
+}
+
+.servicio h3{
+    margin-top: 1rem;
+    color: var(--verde);
+    font-weight: norm;
+}
+
+
+.servicio p{
+    text-align: justify;
+    line-height: 1.8;
+    font-weight: 300;
+}
