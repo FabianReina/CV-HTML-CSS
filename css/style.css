@@ -30,6 +30,19 @@ body{
     border-radius: 1rem;
 }
 
+.btn{
+    background-color: var(--cafe);
+    color: var(--blanco);
+    text-decoration: none;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    
+}
+
 /* Tipografía */
 
 h1{
@@ -41,7 +54,7 @@ h2{
 }
 
 h3{
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 h1,h2,h3{
@@ -63,6 +76,11 @@ h1,h2,h3{
 .hero-contenido{
     text-align: center;
     margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .hero-texto p {
@@ -133,7 +151,6 @@ h1,h2,h3{
 .servicio h3{
     margin-top: 1rem;
     color: var(--verde);
-    font-weight: norm;
 }
 
 
@@ -142,3 +159,5 @@ h1,h2,h3{
     line-height: 1.8;
     font-weight: 300;
 }
+
+
