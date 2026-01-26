@@ -132,7 +132,7 @@ h1,h2,h3{
 
 .navegacion-principal a:hover{
     background-color: var(--gris);
-    color: var(--azul-oscuro);S
+    color: var(--azul-oscuro);
 }
 
 /*Servicios*/
