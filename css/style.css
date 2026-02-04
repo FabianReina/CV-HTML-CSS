@@ -36,11 +36,11 @@ body {
 }
 
 .contenedor {
-    max-width: 95%;
+    max-width: 90%;
     margin: 0 auto;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
     .contenedor {
         max-width: 120rem;
     }
@@ -93,7 +93,7 @@ h3 {
 /*Hero*/
 
 .img-ninja {
-    width: 40%;
+    width: 50%;
     height: auto;
     display: block;
     margin: 2rem auto;
