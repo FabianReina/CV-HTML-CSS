@@ -84,31 +84,34 @@
         <h2>Contacto</h2>
         <form>
             <fieldset>
-                <legend>Contactanos llenando el formulario </legend>
+                <legend>contactanos llenando el formulario </legend>
 
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                </div>
+                <div class="contenedor-formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
 
-                <div>
+                    <div class="campo">
 
-                    <label for="Telefono">Telefono</label>
-                    <input type="tel" id="Telefono" name="Telefono" placeholder="Tu Telefono" required>
-                </div>
+                        <label for="Telefono">Telefono</label>
+                        <input type="tel" id="Telefono" name="Telefono" placeholder="Tu Telefono" required>
+                    </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Tu email" required>
-                </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    </div>
 
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aqui" required></textarea>
-                </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aqui" required></textarea>
+                    </div>
+                </div> <!-- contenedor-formulario -->
 
-                <div>
-                    <input type="submit" value="Enviar">
+
+                <div class="enviar w-100 alinear-derecha flex">
+                    <input class="btn" type="submit" value="Enviar">
                 </div>
 
 
@@ -116,7 +119,7 @@
         </form>
     </section>
 
-    <footer>
+    <footer class="footer">
         <p>Todos los derechos reservados. Fabian Andres Reina Guatame</p>
     </footer>
 

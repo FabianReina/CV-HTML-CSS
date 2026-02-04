@@ -1,4 +1,4 @@
-:root{
+:root {
     --beige: #ab9475;
     --cafe: #663c24;
     --verde: #4d554a;
@@ -6,31 +6,54 @@
     --azul-oscuro: #152324;
     --blanco: #ffffff;
 }
- /* Globales */
-html{
+
+/* Globales */
+html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
     font-family: "roboto condensed", sans-serif;
+    scroll-snap-type: y mandatory;
 
 }
-body{
+
+.servicios,
+.background-navegacion,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*,
+*::before,
+*::after {
+    /* Reset de box model */
+    box-sizing: border-box;
+}
+
+
+body {
     font-size: 16px;
-    background-image: linear-gradient(to bottom, var(--beige) 50%, var(--blanco)); 
+    background-image: linear-gradient(to bottom, var(--beige) 50%, var(--blanco));
 }
 
-.contenedor{
-    max-width: 120rem;
+.contenedor {
+    max-width: 95%;
     margin: 0 auto;
 }
 
+@media (min-width: 1000px) {
+    .contenedor {
+        max-width: 120rem;
+    }
+}
+
 .sombra {
-    box-shadow: 8px 11px 0px 0px rgba(0,0,0,0.78);
+    box-shadow: 8px 11px 0px 0px rgba(0, 0, 0, 0.78);
     background-color: var(--blanco);
     padding: 2rem;
     border-radius: 1rem;
 }
 
-.btn{
+.btn {
     background-color: var(--cafe);
     color: var(--blanco);
     text-decoration: none;
@@ -40,40 +63,53 @@ body{
     font-weight: 600;
     border-radius: 1rem;
     text-transform: uppercase;
-    
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 /* Tipografía */
 
-h1{
+h1 {
     font-size: 3.8rem;
 }
 
-h2{
+h2 {
     font-size: 2.8rem;
 }
 
-h3{
+h3 {
     font-size: 1.8rem;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     text-align: center;
 }
 
 /*Hero*/
 
 .img-ninja {
-    width: 15%;
+    width: 40%;
     height: auto;
     display: block;
     margin: 2rem auto;
     border: 2px solid var(--cafe);
     border-radius: 5%;
 }
-  
 
-.hero-contenido{
+@media (min-width: 900px) {
+    .img-ninja {
+        width: 20%;
+    }
+
+}
+
+
+.hero-contenido {
     text-align: center;
     margin-bottom: 5rem;
     display: flex;
@@ -92,18 +128,36 @@ h1,h2,h3{
 
 /*Titulos */
 
-.titulo{
+.titulo {
     font-weight: 700;
 }
 
-.titulo span{
+.titulo span {
     font-size: 5rem;
 }
 
+/*utilidades*/
+.w-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
 
 /*Navegacion*/
 
-.navegacion-principal{
+.navegacion-principal {
     display: flex;
     flex-direction: column;
 }
@@ -130,7 +184,7 @@ h1,h2,h3{
 
 
 
-.navegacion-principal a:hover{
+.navegacion-principal a:hover {
     background-color: var(--gris);
     color: var(--azul-oscuro);
 }
@@ -138,26 +192,102 @@ h1,h2,h3{
 /*Servicios*/
 
 @media (min-width: 480px) {
-   .servicios{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 2rem;
+    .servicios {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 2rem;
+    }
 }
 
 .servicio {
     padding: 1rem;
 }
 
-.servicio h3{
+.servicio h3 {
     margin-top: 1rem;
     color: var(--verde);
 }
 
 
-.servicio p{
+.servicio p {
     text-align: justify;
     line-height: 1.8;
     font-weight: 300;
 }
 
 
+/* Formulario de contacto */
+
+@media (min-width: 768px) {
+    .contenedor-formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        gap: 1rem;
+    }
+}
+
+.campo:nth-child(3),
+.campo:nth-child(4) {
+    grid-column: 1/ 3
+}
+
+.formulario fieldset {
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.formulario form {
+    background-color: var(--verde);
+    padding: 2rem;
+    width: min(600px, 90%);
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.formulario legend {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formulario h2 {
+    padding-top: 2rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo textarea {
+    width: 100%;
+    ;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.campo textarea {
+    height: 17rem;
+}
+
+.footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem;
+}
