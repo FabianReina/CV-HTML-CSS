@@ -11,16 +11,10 @@
 html {
     font-size: 62.5%;
     font-family: "roboto condensed", sans-serif;
-    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 
 }
 
-.servicios,
-.background-navegacion,
-.formulario {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
 
 *,
 *::before,
@@ -93,7 +87,7 @@ h3 {
 /*Hero*/
 
 .img-ninja {
-    width: 50%;
+    width: 55%;
     height: auto;
     display: block;
     margin: 2rem auto;
