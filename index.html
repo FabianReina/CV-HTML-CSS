@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Fabian Reina</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="desscription" content="Curriculum Vitae de Fabian Andres Reina Guatame, desarrollador de software con habilidades en frontend, backend, análisis de datos y bases de datos.">
+
+    <!-- precconect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+
+    <!-- preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="images/Ninja.webp" as="image">
+
+
 
 </head>
 
@@ -33,7 +45,11 @@
 
     <section class="hero" id="inicio">
         <div class="hero-contenido">
-            <img class="img-ninja" src="images/Ninja.jpg" alt="">
+            <picture>
+                <source loading="lazy" srcset="img/Ninja.webp" type="image/webp">
+                <img loading="lazy" class="img-ninja" src="images/Ninja.jpg" alt="">
+            </picture>
+
             <div class="hero-texto">
                 <h2>Desarrollo de Software</h2>
                 <p>Bogota, Colombia </p>
