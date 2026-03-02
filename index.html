@@ -21,7 +21,7 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="preload" href="images/Ninja.webp" as="image">
+    <link rel="preload" href="images/Ninja.webp" as="image" type="image/webp">
 
 
 
@@ -46,10 +46,12 @@
     <section class="hero" id="inicio">
         <div class="hero-contenido">
             <picture>
-                <source loading="lazy" srcset="img/Ninja.webp" type="image/webp">
-                <img loading="lazy" class="img-ninja" src="images/Ninja.jpg" alt="">
+                <source srcset="images/Ninja.webp" type="image/webp">
+                <img class="img-ninja" 
+                    src="images/Ninja.jpg"
+                    alt="Imagen de Fabian Reina">
             </picture>
-
+ 
             <div class="hero-texto">
                 <h2>Desarrollo de Software</h2>
                 <p>Bogota, Colombia </p>
